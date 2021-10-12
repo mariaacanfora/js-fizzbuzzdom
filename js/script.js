@@ -8,15 +8,13 @@ header.classList.add("text-center", "text-white", "p-3");
 
 // creo scacchiera
 const containerScacchiera = document.getElementById("container-scacchiera");
-console.log(containerScacchiera);
-
 
 let row = document.createElement("div");
 row.classList.add('row', 'row-cols-7');
 row.style.height = "500px";
 containerScacchiera.append(row);
 
-for (i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
     let col = document.createElement("div");
     col.classList.add("col", "m-3", "ratio", "ratio-1x1", "justify-content-center", "d-flex", "align-items-center");
     col.textContent = i;

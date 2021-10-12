@@ -11,24 +11,28 @@ const containerScacchiera = document.getElementById("container-scacchiera");
 console.log(containerScacchiera);
 
 
-/* for (i=1; i<=7; i++) {
+let row = document.createElement("div");
+row.classList.add('row', 'row-cols-7');
+row.style.height = "500px";
+containerScacchiera.append(row);
+
+for (i = 1; i <= 100; i++) {
     let col = document.createElement("div");
-    col.classList.add("col");
-    row.append(col)
-}
- */
-
-for (i = 1; i <= Math.ceil(100 / 7); i++) {
-    let row = document.createElement("div");
-    row.classList.add("row", "border");
-    containerScacchiera.append(row);
-
+    col.classList.add("col", "m-3", "ratio", "ratio-1x1", "justify-content-center", "d-flex", "align-items-center");
+    let textContent= col.textContent = i;
+    let bgColor = "#1389b2";
     
-    for (j = 1; j<=7; j++) {
-        let col = document.createElement("div");
-        col.classList.add("col", "ratio", "ratio-1x1", "border");
-        row.append(col);
-    }
-
-
+    if ((i % 3 === 0) && (i % 5 === 0)){
+        bgColor = "#f0466f";
+        col.textContent = "fizzBuzz";
+    } else if (i % 3 === 0) {
+        bgColor = "#0bd6a1";
+        col.textContent = "fizz";
+    } else if (i % 5 === 0){
+        bgColor = "#ffd166";
+        col.textContent = "buzz"
+    } 
+    
+    col.style.backgroundColor = bgColor;
+    row.append(col);
 }

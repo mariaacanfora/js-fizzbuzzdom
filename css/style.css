@@ -3,3 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.row-cols-7>* {
+    flex: 0 0 auto;
+    width: calc(100% / 7 - 2rem);
+}

@@ -19,7 +19,7 @@ containerScacchiera.append(row);
 for (i = 1; i <= 100; i++) {
     let col = document.createElement("div");
     col.classList.add("col", "m-3", "ratio", "ratio-1x1", "justify-content-center", "d-flex", "align-items-center");
-    let textContent= col.textContent = i;
+    col.textContent = i;
     let bgColor = "#1389b2";
     
     if ((i % 3 === 0) && (i % 5 === 0)){
